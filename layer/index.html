@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/plain" rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        .textboxclasss {
+            height: 60px;
+            width: 10px;
+        }
+        .button4 {padding: 32px 16px;}
+        .btn-group .button {
+            background-color:#705d56;
+            border: 1px solid black;
+            font-family: cursive;
+            color: white;
+            margin-top: 42%;
+            padding: 25px 42px;
+            width: 50%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+        }
+        .btn-group .button:not(:last-child) {
+            border-right: none; /* Prevent double borders */
+        }
+        .btn-group .button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body style="background-color:#c70039">
+<header class="navbar-fixed z-depth-2" style="background-color: #581845;height: 15%" >
+    <span style="font-family: Comic Sans MS, cursive, sans-serif;font-size: 30px;color: whitesmoke;margin-left: 40%">LAYER</span>
+</header>
+<div class="card z-depth-2" align="left" style="width: 80%;border-radius:5%; margin-left: 10%;margin-top: 40%;padding-left: 5%;padding-right: 5%;border: solid;padding-top: 5%;padding-bottom: 5%;background-color: #900c3f">
+    <span style="font-family: cursive;font-size: 15px;margin-left: 33%">Username:</span>
+    <br>
+    <span class="input-field">
+        <input type="text" placeholder="Username" style="font-family: cursive;background-color: white;border: solid"/>
+    </span>
+    <span style="font-family: cursive;font-size: 15px;margin-left: 33%">Password:</span>
+    <br>
+    <span class="input-field">
+        <input type="text" class="textboxclass" placeholder="Username" style="font-family: cursive;background-color: white;border: solid"/>
+    </span>
+</div>
+<div class="btn-group z-depth-2">
+    <button class="button">Login</button>
+    <button class="button"><a href="signup.html">SignUp</a> </button>
+</div>
+</body>
