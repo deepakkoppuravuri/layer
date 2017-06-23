@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/plain" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="loginstyle.css">
+    <link type="text/css" rel="stylesheet" href="navbarstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+
+        $(".button-collapse").sideNav({
+            closeOnClick: true,
+        });
+    });
+</script>
+<ul id="slide-out" class="side-nav" style="height: 100%">
+    <li><div style="background-color: #4fc3f7">
+        <div> <a href="#" style="margin-left: 80px"><img class="circle" src="IMG_0823.JPG" style="margin: auto;height: 40px;width: 40px"></a></div>
+        <div><a href="#"><span class="black-text name" style="margin-left: 70px">deepak</span></a></div>
+        <div><a href="#"><span class="black-text email" style="margin-left: 50px">deepak@gmail.com</span></a></div>
+
+    </div></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#">Search&nbspCatalog</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#" class="waves-effect">Friends</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#" class="waves-effect">Settings</a> </li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Signout</a></li>
+    <li><a class="waves-effect" href="#!">Sign&nbspOut</a></li>
+</ul>
+<header class="navbar-fixed z-depth-2" style="background-color: #581845;height: 15%;display: flex;border-bottom: solid" >
+    <div class="container main" style="width:50px;margin: 0" id="con"   >
+        <a href="#" data-activates="slide-out" class="button-collapse"> <div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div></a>
+    </div>
+    <span style="font-family: Comic Sans MS, cursive, sans-serif;font-size: 30px;color: whitesmoke;margin-left: 30%">LAYER</span>
+    <div class="container imeg">
+        <img id="im" src="IMG_0823.JPG">
+    </div>
+</header>
+<div class="card" style="border-left: solid;border-right: solid;border-bottom: solid;height: 60px;width: 100%;margin: 0px;border-top: solid;display: flex">
+<h4>Notes</h4>
+<span style="margin-left: 240px;margin-top: 10px"><a href="#!" class="waves-effect waves-circle waves-light btn-floating secondary-content">
+<i class="material-icons">add</i>
+  </a></span>
+</div>
+<div class="card liss" style="width: 300px;height: 450px;margin-top: 30px;margin-left: 37px;border: solid">
+    <ol class="oll" style="list-style-type: disc">
+        <li class="lii">Compiler Construction</li>
+        <li>OOPS</li>
+        <li>Web Development</li>
+        <li>DBMS Assignments</li>
+    </ol>
+</div>
+<div class="center">
+    <a href="#"><i class="fa fa-arrow-left" style="font-size:36px;color: black"></i></a>
+</div>
+</body>
