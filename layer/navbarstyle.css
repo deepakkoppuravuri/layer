@@ -1,0 +1,117 @@
+body {
+    transition: background-color .5s;
+}
+.sidenav {
+    display: block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.bar1{
+    background-color: whitesmoke;
+    width: 35px;
+    height: 5px;
+    margin-top: 10px;
+}
+.bar2{
+    background-color: whitesmoke;
+    width: 35px;
+    height: 5px;
+    margin-top: 5px;
+}
+.bar3{
+    background-color: whitesmoke;
+    width: 35px;
+    height: 5px;
+    margin-top: 5px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+    margin-left: 180px;
+}
+.main {
+    transition: margin-left .5s;
+}
+.imeg{
+    margin-left: 90px;
+    margin-top: 6px;
+}
+.imeg #im {
+    margin: auto;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px
+}
+.sideim #sideimg{
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    border-radius: 50%;
+}
+.sideim{
+    margin-left: 30px;
+}
+.sidename{
+    top: 0;
+    margin-left: 20px;
+}
+.sidename #namfont{
+    font-family: cursive;
+    font-size: 30px;
+    color: #00acc1;
+}
+.lis{
+    border: solid;
+    border-color: #00acc1;
+    font-family: cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+.crd{
+    display: block;
+    height: 80%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.hidcrd{
+    height: 380px;
+    width: 220px;
+    margin-left: 70px;
+    border-color: #00acc1;
+    border: solid;
+    overflow-x: hidden;
+}
+.carousel .indicators .indicator-item
+{
+    display: inline-block;
+    list-style: decimal;
+}
+.indicators{
+    list-style-type: decimal;
+}
+.liss .oll {
+    font-family: cursive;
+    font-size: 20px;
+}
