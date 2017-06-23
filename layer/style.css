@@ -1,4 +1,26 @@
- .btn-group .button {
+@font-face {
+    font-family: 'GothamRounded-Book';
+    src: url("font/GothamRounded-Book.eot");
+    src: url("font/GothamRounded-Book.eot?#iefix") format('embedded-opentype'), url("font/GothamRounded-Book.woff") format('woff'), url("font/GothamRounded-Book.ttf") format('truetype'), url("font/GothamRounded-Book.svg#GothamRounded-Book") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamRounded-Bold';
+    src: url("font/GothamRounded-Bold.eot");
+    src: url("font/GothamRounded-Bold.eot?#iefix") format('embedded-opentype'), url("font/GothamRounded-Bold.woff") format('woff'), url("font/GothamRounded-Bold.ttf") format('truetype'), url("font/GothamRounded-Bold.svg#GothamRounded-Bold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamRounded-Medium';
+    src: url("font/GothamRounded-Medium.eot");
+    src: url("font/GothamRounded-Medium.eot?#iefix") format('embedded-opentype'), url("font/GothamRounded-Medium.woff") format('woff'), url("font/GothamRounded-Medium.ttf") format('truetype'), url("font/GothamRounded-Medium.svg#GothamRounded-Medium") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.btn-group .button {
             background-color:#705d56;
             border: 1px solid black;
             font-family: cursive;
@@ -12,9 +34,28 @@
             cursor: pointer;
             float: left;
         }
-        .btn-group .button:not(:last-child) {
+ .btn-group .button:not(:last-child) {
             border-right: none;
         }
-        .btn-group .button:hover {
-            background-color: #3e8e41;
+ .btn-group .button:hover {
+            background-color: #4ddbff;
         }
+  nav {
+      background-color: #1a75ff;
+  }
+  body {
+      font-family: "GothamRounded-Book";
+      font-size: 30px;
+  }
+  nav .row .menu-bar {
+      background-color: #ffffff;
+  }
+
+  .card .card-content {
+      padding: 0px;
+      border-radius: 0 0 2px 2px;
+  }
+
+  .btn, .btn-large {
+      background-color: #1a75ff;
+  }
