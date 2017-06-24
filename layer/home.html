@@ -2,11 +2,13 @@
 <html>
 <head>
 
+    <title>Home</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/plain" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="loginstyle.css">
     <link type="text/css" rel="stylesheet" href="navbarstyle.css">
     <!--Let browser know website is optimized for mobile-->
@@ -24,10 +26,10 @@
         });
     });
 </script>
-<ul class="side-nav" id="mobile-demo">
+<ul id="slide-out" class="side-nav">
     <li><div style="background-color: #4fc3f7">
-        <div> <a href="#" style="margin-left: 80px"><img class="circle" src="IMG_0823.JPG" style="margin: 15% 0px 0px -15%;height: 100%;width: 200px"></a></div>
-        <div><a href="#"><span class="black-text name" style="margin-left: 35%">Deepak</span></a></div>
+        <div> <a href="#" style="margin-left: 80px"><img class="circle" src="IMG_0823.JPG" style="margin: auto;height: 40px;width: 40px"></a></div>
+        <div><a href="#"><span class="black-text name" style="margin-left: 70px">deepak</span></a></div>
         <div><a href="#"><span class="black-text email" style="margin-left: 50px">deepak@gmail.com</span></a></div>
 
     </div></li>
@@ -38,21 +40,38 @@
     <li><div class="divider"></div></li>
     <li><a href="#" class="waves-effect">Settings</a> </li>
     <li><div class="divider"></div></li>
+    <li><a class="subheader">Signout</a></li>
     <li><a class="waves-effect" href="#!">Sign&nbspOut</a></li>
 </ul>
-<header class="navbar-fixed z-depth-2" style="background-color: #581845;height: 15%;display: flex" >
-    <div class="container main" style="width:70px;margin: 0" id="con"   >
-        <a href="#" data-activates="mobile-demo" class="button-collapse"> <div>
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div></a>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">LAYER</a>
+        <div class="container main" style="width:70px;margin:0" id="con"   >
+            <a href="#" data-activates="mobile-demo" class="button-collapse"> <div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div></a>
+        </div>
+
+        <ul class="side-nav" id="mobile-demo">
+            <li><div style="background-color: #4fc3f7">
+                <div> <a href="#" style="margin-left: 80px"><img class="circle" src="IMG_0823.JPG" style="margin: 15% 0px 0px -25%;height: 100% ;width: 100%"></a></div>
+                <div><a href="#"><span class="black-text name" style="margin-left: 35%">Deepak</span></a></div>
+                <div><a href="#"><span class="black-text email" style="margin-left: 50px">deepak@gmail.com</span></a></div>
+
+            </div></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#">Search&nbspCatalog</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#" class="waves-effect">Friends</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#" class="waves-effect">Settings</a> </li>
+            <li><div class="divider"></div></li>
+            <li><a class="waves-effect" href="#!">Sign&nbspOut</a></li>
+        </ul>
     </div>
-    <span style="font-family: Comic Sans MS, cursive, sans-serif;font-size: 30px;color: whitesmoke;margin-left: 30%">LAYER</span>
-    <div class="container imeg">
-        <img class="im" src="IMG_0823.JPG">
-    </div>
-</header>
+</nav>
 <div class="container" style="margin-top: 70px;width: 250px;height: 450px;margin-left: 70px">
 
     <script type="text/javascript" language="JavaScript">
@@ -68,7 +87,7 @@
                 <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
             </div>
             <div class="container">
-                <h4 style="margin: 0px">BOOKS</h4>
+                <a class="black-text" href="books.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Books</a>
             </div>
         </div>
         <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
@@ -76,10 +95,41 @@
                 <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
             </div>
             <div class="container">
-                <h4 style="margin: 0px;">BOOKS1</h4>
+                <a class="black-text" href="sets.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Sets</a>
             </div>
         </div>
-
+        <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
+            <div class="card" style="width: 250px;height: 300px;margin-top: 0px;border-bottom: solid;z-index: 4">
+                <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
+            </div>
+            <div class="container">
+                <a class="black-text" href="qp.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">QPs</a>
+            </div>
+        </div>
+        <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
+            <div class="card" style="width: 250px;height: 300px;margin-top: 0px;border-bottom: solid;z-index: 4">
+                <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
+            </div>
+            <div class="container">
+                <a class="black-text" href="notes.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Notes</h4></a>
+            </div>
+        </div>
+        <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
+            <div class="card" style="width: 250px;height: 300px;margin-top: 0px;border-bottom: solid;z-index: 4">
+                <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
+            </div>
+            <div class="container">
+                <a class="black-text" href="wishlist.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Wishlist</h4></a>
+            </div>
+        </div>
+        <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
+            <div class="card" style="width: 250px;height: 300px;margin-top: 0px;border-bottom: solid;z-index: 4">
+                <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
+            </div>
+            <div class="container">
+                <a class="black-text" href="#"><h4 class="center-align" style="margin: 0px; font-size: 80%">Report</h4></a>
+            </div>
+        </div>
     </div>
 </div>
 </body>
