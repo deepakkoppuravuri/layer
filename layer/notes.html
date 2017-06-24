@@ -1,74 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
 
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/plain" rel="stylesheet" href="css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="loginstyle.css">
+    <!--Import Style.css-->
+    <link type="text/css" rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="navbarstyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 <body>
+<!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
 
         $(".button-collapse").sideNav({
-            closeOnClick: true,
+            closeOnClick: true
         });
     });
 </script>
-<ul class="side-nav" id="mobile-demo">
-    <li><div style="background-color: #4fc3f7">
-        <div> <a href="#" style="margin-left: 80px"><img class="circle" src="IMG_0823.JPG" style="margin: 15% 0px 0px -15%;height: 100%;width: 200px"></a></div>
-        <div><a href="#"><span class="black-text name" style="margin-left: 35%">Deepak</span></a></div>
-        <div><a href="#"><span class="black-text email" style="margin-left: 50px">deepak@gmail.com</span></a></div>
+<!-- NAVBAR-->
+<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">LAYER</a>
+        <div class="container main" style="width:70px;margin:0" id="con"   >
+            <a href="#" data-activates="mobile-demo" class="button-collapse"> <div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div></a>
+        </div>
 
-    </div></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#">Search&nbspCatalog</a></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#" class="waves-effect">Friends</a></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#" class="waves-effect">Settings</a> </li>
-    <li><div class="divider"></div></li>
-    <li><a class="waves-effect" href="#!">Sign&nbspOut</a></li>
-</ul>
-<header class="navbar-fixed z-depth-2" style="background-color: #581845;height: 15%;display: flex" >
-    <div class="container main" style="width:50px;margin: 0" id="con"   >
-        <a href="#" data-activates="mobile-demo" class="button-collapse"> <div>
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div></a>
+        <ul class="side-nav" id="mobile-demo">
+            <li><div style="background-color: #4fc3f7">
+                <div> <a href="#" style="margin-left: 80px"><img class="circle" src="IMG_0823.JPG" style="margin: 15% 0px 0px -25%;height: 100% ;width: 100%"></a></div>
+                <div><a href="#"><span class="black-text name" style="margin-left: 35%">Deepak</span></a></div>
+                <div><a href="#"><span class="black-text email" style="margin-left: 50px">deepak@gmail.com</span></a></div>
+
+            </div></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#">Search&nbspCatalog</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#" class="waves-effect">Friends</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#" class="waves-effect">Settings</a> </li>
+            <li><div class="divider"></div></li>
+            <li><a class="waves-effect" href="#!">Sign&nbspOut</a></li>
+        </ul>
     </div>
-    <span style="font-family: Comic Sans MS, cursive, sans-serif;font-size: 30px;color: whitesmoke;margin-left: 30%">LAYER</span>
-    <div class="container imeg">
-        <img class="im" src="IMG_0823.JPG">
-    </div>
-</header>
-<div class="card z-depth-3" style="height: 60px;width: 100%;margin: 0px;display: flex">
-<h4>Notes</h4>
-<span style="margin-left: 240px;margin-top: 10px"><a href="#!" class="waves-effect waves-circle waves-light btn-floating secondary-content">
-<i class="material-icons">add</i>
-  </a></span>
-</div>
-<div class="card liss z-depth-3" style="width: 300px;height: 450px;margin-top: 30px;margin-left: 37px">
-    <ol class="oll" style="list-style-type: disc">
-        <li class="lii">Compiler Construction</li>
-        <li>OOPS</li>
-        <li>Web Development</li>
-        <li>DBMS Assignments</li>
+</nav>
+<!--header-->
+<nav class="row menu-bar" style="background-color: #ffffff; color: black;">
+    <span style="margin-left: 3%">Notes</span>
+    <span class="right" style="margin-top: -1%;margin-right: 2%"><a href="#!" class="btn-floating center waves-effect waves-light" style="background-color: black">
+        <i class="large material-icons" style="color: white;font-size: 30px;margin-top: -20%">add</i>
+    </a></span>
+</nav>
+<!--content-->
+<div class="card liss z-depth-3" style="margin-left: 10%;margin-right: 10%;margin-top: 15%;height: 400px">
+    <ol class="oll" style="list-style-type: disc;padding-top: 10%;">
+    <a href="#!" style="color: black"> <li>Compiler Construction</li></a>
+    <a href="#!" style="color: black"> <li>OOPS</li></a>
+    <a href="#!" style="color: black"><li>Web Development</li></a>
+    <a href="#!" style="color: black"><li>DBMS Assignments</li></a>
     </ol>
 </div>
-<div class="center">
-    <a href="#"><i class="fa fa-arrow-left" style="font-size:36px;color: black"></i></a>
+<!--Back Button-->
+<div class="row" style="margin-top: 5%">
+    <div class="col s4 m4 c4">
+
+    </div>
+    <div class="col s4 c4 m4">
+        <a class="btn" href="home.html">Back</a>
+    </div>
+    <div class="col s4 m4 c4">
+
+    </div>
 </div>
 </body>
+</html>
