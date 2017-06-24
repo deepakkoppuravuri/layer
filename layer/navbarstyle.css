@@ -51,7 +51,7 @@ body {
     margin-left: 90px;
     margin-top: 6px;
 }
-.imeg #im {
+.imeg .im {
     margin: auto;
     border-radius: 50%;
     height: 30px;
