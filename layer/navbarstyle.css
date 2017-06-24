@@ -17,7 +17,7 @@ body {
     background-color: whitesmoke;
     width: 35px;
     height: 5px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .bar2{
     background-color: whitesmoke;
@@ -112,6 +112,25 @@ body {
     list-style-type: decimal;
 }
 .liss .oll {
-    font-family: cursive;
+    font-family: GothamRounded-Book;
     font-size: 20px;
+
+}
+.btn-group .button {
+    background-color:#705d56;
+    border: 1px solid black;
+    color: white;
+
+    padding: 25px 42px;
+    width: 50%;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
+.btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group .button:hover {
+    background-color: #3e8e41;
 }

@@ -20,12 +20,11 @@
     font-style: normal;
 }
 
-.btn-group .button {
+.btn-group1 .button {
             background-color:#705d56;
             border: 1px solid black;
             font-family: cursive;
             color: white;
-            margin-top: 17.5%;
             padding: 25px 42px;
             width: 50%;
             text-align: center;
