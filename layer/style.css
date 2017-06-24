@@ -46,6 +46,7 @@
   body {
       font-family: "GothamRounded-Book";
       font-size: 30px;
+      background-color: #ececec;
   }
   nav .row .menu-bar {
       background-color: #ffffff;
@@ -58,4 +59,12 @@
 
   .btn, .btn-large {
       background-color: #1a75ff;
+  }
+
+  .card {
+      border-radius:10%;
+  }
+
+  .card .card-image img {
+      border-radius:10% 10% 0 0;
   }
