@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
     <title>Home</title>
+
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/plain" rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Import Style.css-->
     <link type="text/css" rel="stylesheet" href="style.css">
-    <link type="text/css" rel="stylesheet" href="loginstyle.css">
     <link type="text/css" rel="stylesheet" href="navbarstyle.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
 
+            $(".button-collapse").sideNav({
+                closeOnClick: true
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 <body>
+<!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
 
@@ -26,23 +37,7 @@
         });
     });
 </script>
-<ul id="slide-out" class="side-nav">
-    <li><div style="background-color: #4fc3f7">
-        <div> <a href="#" style="margin-left: 80px"><img class="circle" src="IMG_0823.JPG" style="margin: auto;height: 40px;width: 40px"></a></div>
-        <div><a href="#"><span class="black-text name" style="margin-left: 70px">deepak</span></a></div>
-        <div><a href="#"><span class="black-text email" style="margin-left: 50px">deepak@gmail.com</span></a></div>
-
-    </div></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#">Search&nbspCatalog</a></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#" class="waves-effect">Friends</a></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#" class="waves-effect">Settings</a> </li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Signout</a></li>
-    <li><a class="waves-effect" href="#!">Sign&nbspOut</a></li>
-</ul>
+<!-- NAVBAR-->
 <nav>
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">LAYER</a>
@@ -72,12 +67,11 @@
         </ul>
     </div>
 </nav>
-<div class="container" style="margin-top: 70px;width: 250px;height: 450px;margin-left: 70px">
+<div class="container" style="margin-top: 20%;width: 250px">
 
     <script type="text/javascript" language="JavaScript">
         $(document).ready(function () {
             $('.carousel').carousel({indicators: true});
-
 
         })
     </script>
@@ -87,7 +81,7 @@
                 <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
             </div>
             <div class="container">
-                <a class="black-text" href="books.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Books</a>
+                <a class="black-text" href="books.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Books</h4></a>
             </div>
         </div>
         <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
@@ -95,7 +89,7 @@
                 <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
             </div>
             <div class="container">
-                <a class="black-text" href="sets.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Sets</a>
+                <a class="black-text" href="sets.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">Sets</h4></a>
             </div>
         </div>
         <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
@@ -103,7 +97,7 @@
                 <img src="IMG_0823.JPG" style="margin: auto;height: inherit;width: inherit">
             </div>
             <div class="container">
-                <a class="black-text" href="qp.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">QPs</a>
+                <a class="black-text" href="qp.html"><h4 class="center-align" style="margin: 0px; font-size: 80%">QPs</h4></a>
             </div>
         </div>
         <div class="container carousel-item" style="width: 250px;height: 390px;background-color: #c70039;top: 0">
@@ -132,4 +126,6 @@
         </div>
     </div>
 </div>
+
 </body>
+</html>
