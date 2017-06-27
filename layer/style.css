@@ -20,11 +20,12 @@
     font-style: normal;
 }
 
-.btn-group1 .button {
+.btn-group .button {
             background-color:#705d56;
             border: 1px solid black;
             font-family: cursive;
             color: white;
+            margin-top: 17.5%;
             padding: 25px 42px;
             width: 50%;
             text-align: center;
@@ -58,12 +59,4 @@
 
   .btn, .btn-large {
       background-color: #1a75ff;
-  }
-
-  .card {
-      border-radius:10%;
-  }
-
-  .card .card-image img {
-      border-radius:10% 10% 0 0;
   }
