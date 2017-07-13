@@ -23,17 +23,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `books`
+-- Table structure for table `publishers`
 --
 
-CREATE TABLE `books` (
-  `book_id` varchar(255) NOT NULL,
+CREATE TABLE `publishers` (
   `publisher_id` varchar(255) NOT NULL,
-  `book_name` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `total_sets` varchar(255) NOT NULL,
-  `edition` varchar(255) NOT NULL,
-  `status` int(50) NOT NULL DEFAULT '1'
+  `publisher_name` varchar(255) DEFAULT NULL,
+  `email_id_p` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `contact` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -41,10 +40,11 @@ CREATE TABLE `books` (
 --
 
 --
--- Indexes for table `books`
+-- Indexes for table `publishers`
 --
-ALTER TABLE `books`
-  ADD PRIMARY KEY (`book_id`);
+ALTER TABLE `publishers`
+  ADD PRIMARY KEY (`publisher_id`),
+  ADD UNIQUE KEY `email_id_p` (`email_id_p`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

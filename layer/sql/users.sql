@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2017 at 06:58 AM
+-- Generation Time: Jul 12, 2017 at 02:43 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -23,17 +23,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `books`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `books` (
-  `book_id` varchar(255) NOT NULL,
-  `publisher_id` varchar(255) NOT NULL,
-  `book_name` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `total_sets` varchar(255) NOT NULL,
-  `edition` varchar(255) NOT NULL,
-  `status` int(50) NOT NULL DEFAULT '1'
+CREATE TABLE `users` (
+  `user_id` int(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `email_id_u` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `api_key` varchar(255) NOT NULL,
+  `mobile_no` varchar(255) NOT NULL,
+  `education` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -41,11 +43,20 @@ CREATE TABLE `books` (
 --
 
 --
--- Indexes for table `books`
+-- Indexes for table `users`
 --
-ALTER TABLE `books`
-  ADD PRIMARY KEY (`book_id`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
