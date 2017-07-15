@@ -1,9 +1,11 @@
 <?php
 class database{
     private $conn=null;
+    //constructor
     function __construct()
     {
     }
+    //makes a connection to database and returns the connection.
     function connect()
     {
         include_once dirname(__FILE__).'./config.php';
