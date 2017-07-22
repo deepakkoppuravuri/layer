@@ -8,7 +8,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/plain" rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Import Style.css-->
     <link type="text/css" rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="navbarstyle.css">
@@ -68,41 +68,25 @@
     </div>
 </nav>
 
-<!-- Header -->
-<nav class="row menu-bar" style="background-color: #ffffff; color: black;">
-    <div class="col s6 c6">
-        Books
-    </div>
-    <div class="row menu-bar">
-        <a class = "col s4 c4 right-align" style="color:black;" href="addbook.html"><i class="smaller material-icons">library_add</i></a>
-        <a class = "col s2 c2 right-align" style="color:black;" href="searchbook.html"><i class="smaller material-icons">search</i></a>
-    </div>
-</nav>
-
-<!-- Cards -->
-<div class="row">
-    <div class="col s6 m6 c6">
-        <div class="card">
-            <div class="card-image">
-                <img class="activator" src="IMG_0823.JPG">
+<!--Library Bar-->
+<div class="card" style="height: 45%; margin: 0 0 1rem 0;" >
+    <div class="card-content">
+        <div class = "row">
+            <div class="col s6 c6 m6">
+                <div style="font-size: 75%">My Books</div>
+                <br>
+                <div style="font-size: 40%">Total Books: ###</div>
             </div>
-            <div class="card-content">
-                <a href="#"><span class="card-title activator grey-text text-darken-2 center-align">Book 1</span></a>
-            </div>
-        </div>
-    </div>
-    <div class="col s6 m6 c6">
-        <div class="card">
-            <div class="card-image">
-                <img class="activator" src="IMG_0823.JPG">
-            </div>
-            <div class="card-content">
-                <a href="#"><span class="card-title activator grey-text text-darken-2 center-align">Book 2</span></a>
+            <div class="col s6 c6 m6 right-align" style="font-size: 50%">
+                <br>
+                <a class="btn-floating"><i class="fa fa-search"></i></a>
+                <a class="btn-floating"><i class="fa fa-plus"></i></a>
             </div>
         </div>
     </div>
 </div>
 
+<!--Book Cards -->
 <div class="row">
     <div class="col s6 m6 c6">
         <div class="card">
@@ -110,7 +94,31 @@
                 <img class="activator" src="IMG_0823.JPG">
             </div>
             <div class="card-content">
-                <a href="#"><span class="card-title activator grey-text text-darken-2 center-align">Book 3</span></a>
+                <a href="view_book.html"><span class="card-title activator grey-text text-darken-2 center-align">Book 1</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="col s6 m6 c6">
+        <a href="view_book.html">
+            <div class="card">
+                <div class="card-image">
+                    <a href="view_book.html"><img class="activator" src="IMG_0823.JPG"></a>
+                </div>
+                <div class="card-content">
+                    <a href="view_book.html"><span class="card-title activator grey-text text-darken-2 center-align">Book 2</span></a>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col s6 m6 c6">
+        <div class="card">
+            <div class="card-image">
+                <img class="activator" src="IMG_0823.JPG">
+            </div>
+            <div class="card-content">
+                <a href="view_book.html"><span class="card-title activator grey-text text-darken-2 center-align">Book 3</span></a>
             </div>
         </div>
     </div>
@@ -120,7 +128,7 @@
                 <img class="activator" src="IMG_0823.JPG">
             </div>
             <div class="card-content">
-                <a href="#"><span class="card-title activator grey-text text-darken-2 center-align">Book 4</span></a>
+                <a href="view_book.html"><span class="card-title activator grey-text text-darken-2 center-align">Book 4</span></a>
             </div>
         </div>
     </div>

@@ -16,27 +16,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </head>
-<body>
-<nav>
+<body background="images/background.jpg">
+<nav background="images/blue-gradient.jpg">
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">LAYER</a>
     </div>
 </nav>
-<div class="center card z-depth-2" style="border-radius:5%;border: solid;margin-top: 30%;width: 80%;margin-left: 10%;padding-bottom: 10%;width: 80%">
-    <span class="center" style="font-size: 15px">Username:</span>
-    <br>
-    <span class="input-field" style="padding-left: 5%;">
-        <input type="text" placeholder="Username"  style="font-family: cursive;background-color: white;border: solid;border-radius: 25px;padding-left: 5%;width: 80%"/>
+<form enctype="multipart/form-data" method="POST" id="loginForm">
+    <div class="center card z-depth-2" style="border-radius:5%;border: solid;margin-top: 30%;width: 80%;margin-left: 10%;padding-bottom: 10%;width: 80%">
+        <span class="center" style="font-size: 15px">Username:</span>
+        <br>
+        <span class="input-field" style="padding-left: 5%;">
+        <input id="email" type="text" placeholder="Username"  style="font-family: cursive;background-color: white;border: solid;border-radius: 25px;padding-left: 5%;width: 80%"/>
     </span>
-    <span class="center" style="font-size: 15px;">Password:</span>
-    <br>
-    <span class="input-field" style="padding-left: 5%;">
-        <input type="text" class="textboxclass"  placeholder="Password" style="width: 80%;font-family: cursive;border-radius: 25px;background-color: white;border: solid;padding-left: 5%"/>
+        <span class="center" style="font-size: 15px;">Password:</span>
+        <br>
+        <span class="input-field" style="padding-left: 5%;">
+        <input id="password" type="text" class="textboxclass"  placeholder="Password" style="width: 80%;font-family: cursive;border-radius: 25px;background-color: white;border: solid;padding-left: 5%"/>
     </span>
-</div>
-<div class="btn-group z-depth-2" style="position: absolute;bottom: 0;width: 100%;">
-    <button class="button" style="background-color: #1a75ff"><a href="home.html" class="white-text">Login</a></button>
-    <button class="button" style="background-color: #1a75ff"><a href="signup.html" class="white-text">SignUp</a> </button>
-</div>
+    </div>
+</form>
+    <div class="btn-group z-depth-2" style="position: absolute;bottom: 0;width: 100%;">
+        <button type="submit" class="button" style="background-color: #1a75ff"><a class="white-text" href="home.html">Login</a></button>
+        <button class="button" style="background-color: #1a75ff"><a href="signup.html" class="white-text">SignUp</a> </button>
+    </div>
 </body>
