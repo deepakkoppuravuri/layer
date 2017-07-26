@@ -1,0 +1,230 @@
+<html>
+<head>
+    <title>
+        publisher login
+    </title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/plain" rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Import Style.css-->
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="navbarstyle.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        function getQueryvariable(variable) {
+            var query=window.location.search.substring(1);
+            var vars=query.split("&");
+            for(var i=0;i<vars.length;i++)
+            {
+                var pass=vars[i].split("=");
+                if(pass[0]==variable){
+                    return true;
+                }
+                else false;
+            }
+        }
+        $(document).ready(function () {
+            if(getQueryvariable("updated")) {
+                Materialize.toast("profile pic updated", 3000, 'rounded');
+            }
+            document.getElementById("picfile").addEventListener("change",function () {
+                var filename=document.getElementById("picfile").value;
+                var ext=filename.substring(filename.lastIndexOf('.')+1);
+                if(!((/^(jpg|JPG|JPEG|jpeg|bmp|BMP|png|PNG)$/).test(ext)))
+                {
+                    Materialize.toast("File format not supported",3000,'rounded');
+                }
+                else{
+                    $email=localStorage.getItem("email_id");
+                var form = new FormData();
+                form.append("img",this.files[0]);
+                form.append("email_id",$email);
+
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "http://localhost/layer/v1/publisher/updatepic",
+                    "method": "POST",
+                    "headers": {
+                        "authentication": localStorage.getItem("api_key"),
+                        "Access-Control-Request-Headers": "authentication"
+                    },
+                    "processData": false,
+                    "contentType": false,
+                    "mimeType": "multipart/form-data",
+                    "data": form,
+                    success: function (response) {
+                       // response.processData;
+                        //console.log(response.processData);
+                        $imgpath="http://localhost/layer/photos/"+localStorage.getItem("user_id")+".jpg";
+                        localStorage.setItem("img_path",$imgpath);
+                       window.location="pubeditprofile.html?updated=1";
+
+
+                        //Materialize.toast("Propic Updated Successfully",3000,'rounded');
+                    },
+                    error: function (reponse) {
+                        if(reponse.status==404)
+                        {
+                            Materialize.toast("something went wrong",4000,'rounded');
+                        }
+                        else
+                        {
+                         Materialize.toast("No Internet Connection..",3000,'rounded');
+                        }
+
+                    }
+                };
+
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                });
+                }
+            });
+            document.getElementById("nav_propic").src=localStorage.getItem("img_path");
+            document.getElementById("nav_usernme").textContent=localStorage.getItem("username").toUpperCase();
+            document.getElementById("email_nav").textContent=localStorage.getItem("email_id");
+            document.getElementById("editpic").src=localStorage.getItem("img_path");
+            if(localStorage.getItem("username")!="Not Available")
+            {
+                document.getElementById("username").value=localStorage.getItem("username");
+            }
+            if(localStorage.getItem("mobile_no")!="Not Available")
+            {
+                document.getElementById("contact").value=localStorage.getItem("mobile_no");
+            }
+            $('.sidenavv').sideNav({
+                onClick: true
+            })
+        });
+        function altfn() {
+            Materialize.toast("Profile pic Updated Successfully",3000,'rounded');
+        }
+        function picclk() {
+            var url=document.getElementById("picfile").value;
+            document.getElementById("username").value=document.getElementById("picfile").value;
+            Materialize.toast(url,3000);
+        }
+        function logout() {
+            localStorage.clear();
+            window.location="publogin.html";
+        }
+        function save() {
+            var publisher_name=document.getElementById("username").value;
+            if(publisher_name=="")
+            {
+                publisher_name="Not Available";
+            }
+            var contact=document.getElementById("contact").value;
+            if(contact.length!=10&&contact.length!=0)
+            {
+                Materialize.toast("contact is not valid",3000,'rounded');
+                document.getElementById("contact").value="";
+            }
+            else{
+                if(contact.length==0)
+                {
+                    contact="Not Available";
+                }
+            $.ajax({
+                url: "http://localhost/layer/v1/publisher/updateprofile",
+                method: "POST",
+                type: "POST",
+                crossDomain: true,
+                headers: {
+                    authentication: localStorage.getItem("api_key"),
+                    "Access-Control-Request-Headers": "authentication"
+
+                },
+                data: {
+                    publisher_name: publisher_name,
+                    contact: contact,
+                    email_id :localStorage.getItem("email_id")
+                },
+                success: function (response) {
+                    localStorage.setItem("username",publisher_name);
+                    localStorage.setItem("mobile_no",contact);
+                    Materialize.toast("profile updated successfully",5000,'rounded');
+                    setTimeout(home,800);
+                },
+                error: function (response) {
+                    if(response.status==404)
+                    {
+                        console.log(response);
+                        var o=JSON.parse(response.responseText);
+                        Materialize.toast(o.message,3000,'rounded');
+                        if(o.message=="Authentication Failed")
+                        {
+                            window.location="publogin.html?id=2";
+                        }
+                    }
+                    else
+                    {
+                        console.log(response);
+                        Materialize.toast("No internet Connection",3000,'rounded');
+                    }
+                }
+            });
+            }
+        }
+        function home() {
+            window.location="pubhome.html";
+        }
+    </script>
+</head>
+<body >
+<nav>
+    <div class="nav-wrapper" style="display: flex" >
+        <a  data-activates="mobile-demo" class="sidenavv" style="margin-left: 5%;margin-top: 3.5%">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </a>
+        <a href="#!" class="brand-logo center" >LAYER</a>
+    </div>
+    <ul id="mobile-demo" class="side-nav">
+        <li><div style="background-color: #4fc3f7">
+            <div> <a href="#" style="margin-left: 80px"><img class="circle" id="nav_propic" style="margin: 15% 0px 0px -25%;height: 20% ;width: 100%"></a></div>
+            <div><a href="#"><span class="black-text name" id="nav_usernme" style="margin-left: 35%"></span></a></div>
+            <div class="center"><a href="#"><span class="black-text" id="email_nav"></span></a></div>
+
+        </div></li>
+        <li><div class="divider"></div></li>
+        <li><a href="pubhome.html">Home</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#">Search&nbspCatalog</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#" class="waves-effect">Friends</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#" class="waves-effect">Settings</a> </li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" onclick="logout()">Sign&nbspOut</a></li>
+    </ul>
+</nav>
+<div class="container center" style="margin-top: 10%">
+    <img id="editpic" class="circle" style="width: 40%;height: 20%">
+</div>
+<div>
+    <div class="file-field input-field center">
+        <div class="btn" style="float: none">
+            <span >Upload Photo</span>
+            <input type="file" id="picfile">
+        </div><br>
+    </div>
+    <div  style="font-size: 15px;margin-top: 5%;font-weight: 700;padding-left: 5%">Name:</div>
+    <input type="text" style="margin-top: 5%;font-family: cursive;padding-left: 5%" placeholder="Username" id="username">
+    <div  style="font-size: 15px;margin-top: 5%;font-weight: 700;padding-left: 5%">Contact:</div>
+    <input type="number" style="margin-top: 5%;font-family: cursive;padding-left: 5%" placeholder="Username" id="contact">
+    <div class="col s4 c4 m4" style="margin-top: 20%">
+        <a class="btn" href="pubhome.html" style="float: left">Back</a>
+        <a class="btn"  onclick="save()" style="float: right">Save</a>
+    </div>
+</div>
+<div id="toast-container" style="margin-bottom: 25%;padding-right: 5%;font-family: GothamRounded-Book;padding-left: 5%"></div>
+</body>
+</html>
